@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @client.name %>
+</p>
+
+<h2>Phones</h2>
+<% if @client.phones.any? %>
+  <ul>
+    <% for phone in @client.phones %>
+      <li><%= phone.number %> (<%= phone.place %>)</li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>This person has no phones yet.</p>
+<% end %>
+
+
+<%= link_to 'Edit', edit_client_path(@client) %> |
+<%= link_to 'Back', clients_path %>
