@@ -16,14 +16,38 @@
     <%= f.text_field :name %>
   </div>
 
-  <h2>Phones</h2>
+<h2>Phones</h2>
+<div id="phones">
   <div class="items">
     <%= f.nested_fields_for :phones do |f|
       render 'phone', f: f
-    end -%>
+     end -%>
   </div>
   <a href="#" class="add">add phone</a>
-  
+</div>
+
+
+  <h2>Contatos</h2>
+  <div id="contact">
+  <div class="items">
+    <%= f.nested_fields_for :contacts do |f|
+      render 'contact', f: f
+    end -%>
+  </div>
+  <a href="#" class="add">add contact</a>
+  </div>
+
+  <h2>Documentos</h2>
+  <div id="document">
+  <div class="items">
+    <%= f.nested_fields_for :assets do |f|
+      render 'asset', f: f
+    end -%>
+  </div>
+  <a href="#" class="add">add documento</a>
+  </div>
+
+
   <div class="actions">
     <%= f.submit %>
   </div>

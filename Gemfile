@@ -29,6 +29,7 @@ gem 'jquery-rails'
 gem 'jbuilder', '~> 1.2'
 
 gem 'awesome_nested_fields', '0.6.4'
+gem "paperclip", "3.5.0"
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.

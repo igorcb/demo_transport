@@ -16,6 +16,9 @@ class ClientsController < ApplicationController
   def new
     @client = Client.new
     @client.phones.build
+    @client.contacts.build
+    @client.assets.build
+
   end
 
   # GET /clients/1/edit
